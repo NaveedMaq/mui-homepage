@@ -47,7 +47,7 @@ function Header() {
 
       <Box width='100%' height='100vh'>
         <video
-          src='video.mp4'
+          src='/video/video.mp4'
           width='100%'
           height='70%'
           autoPlay
