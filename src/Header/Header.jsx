@@ -6,7 +6,6 @@ import {
   Tab,
   Tabs,
   Toolbar,
-  Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -15,11 +14,15 @@ import ApiIcon from '@mui/icons-material/Api';
 import GoogleIcon from '@mui/icons-material/Google';
 import EmailIcon from '@mui/icons-material/Email';
 import Sidebar from './Sidebar';
+import { CustomizedTypography } from '../common/styled';
+import { useState } from 'react';
 
 const links = ['products', 'solution', 'pricing', 'enterprise'];
 
 function Header() {
   const isNarrow = useMediaQuery(useTheme().breakpoints.down('md'));
+
+  const [selectedTab, setSelectedTab] = useState(0);
 
   return (
     <AppBar
@@ -35,26 +38,37 @@ function Header() {
           justifyContent={'space-between'}
         >
           <ApiIcon sx={{ color: '#000' }} />
-          <Typography variant='h6' fontFamily={'fantasy'} color={'#000'}>
+          <CustomizedTypography
+            variant='h6'
+            fontFamily={'fantasy'}
+            color={'#000'}
+          >
             CodeEnv
-          </Typography>
+          </CustomizedTypography>
           <Sidebar links={links} />
         </Box>
       ) : (
         <Toolbar>
-          <Box sx={{ display: 'flex', width: '100%', alignItems: 'center' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              alignItems: 'center',
+              gap: '30px',
+            }}
+          >
             <ApiIcon sx={{ color: '#000' }} />
             <Box>
-              <Tabs value={0} sx={{ textDecoration: 'none' }} component={Link}>
+              <Tabs
+                value={selectedTab}
+                sx={{ textDecoration: 'none' }}
+                component={Link}
+                onChange={(_, val) => setSelectedTab(val)}
+              >
                 {links.map((link, i) => (
                   <Tab
                     sx={{
                       fontWeight: 'bold',
-                      textDecoration: 'none',
-                      ':hover': {
-                        textDecoration: 'underline',
-                        textUnderlineOffset: '5px',
-                      },
                     }}
                     key={i}
                     label={link}
@@ -83,7 +97,8 @@ function Header() {
         />
 
         <Box display='flex' width='100%'>
-          <Typography
+          <CustomizedTypography
+            fontWeight={'bold'}
             fontSize={{ lg: 30, md: 24, xs: 18 }}
             margin='auto'
             variant='h4'
@@ -91,7 +106,7 @@ function Header() {
             textAlign='center'
           >
             Build Your Softwares Hassle Free and with Top Notch quality
-          </Typography>
+          </CustomizedTypography>
         </Box>
 
         <Box display={'flex'} justifyContent={'center'} marginTop={5} gap={2}>

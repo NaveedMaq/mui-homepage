@@ -1,17 +1,12 @@
-import {
-  Box,
-  Button,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
+import { CustomizedTypography } from '../common/styled';
 
 function Footer() {
   const isNarrow = useMediaQuery(useTheme().breakpoints.down('md'));
 
   return (
     <Box component={'footer'} display={'flex'} flexDirection={'column'}>
-      <Typography
+      <CustomizedTypography
         fontSize={{ lg: 30, md: 24, xs: 18 }}
         fontWeight={'bold'}
         variant='h3'
@@ -19,15 +14,15 @@ function Footer() {
         textAlign={'center'}
       >
         Ready For Any Team Size
-      </Typography>
-      <Typography
+      </CustomizedTypography>
+      <CustomizedTypography
         fontSize={{ lg: 24, md: 20, xs: 16 }}
         variant='div'
         padding={4}
         textAlign={'center'}
       >
         Optimized For Any Team Size
-      </Typography>
+      </CustomizedTypography>
 
       <Box
         display={'flex'}
