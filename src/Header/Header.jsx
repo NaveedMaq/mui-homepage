@@ -15,7 +15,7 @@ const links = ['products', 'solution', 'pricing', 'enterprise'];
 
 function Header() {
   return (
-    <AppBar sx={{ bgcolor: 'transparent', boxShadow: '0' }}>
+    <AppBar position='sticky' sx={{ bgcolor: 'transparent', boxShadow: '0' }}>
       <Toolbar>
         <Box sx={{ display: 'flex', width: '100%', alignItems: 'center' }}>
           <ApiIcon sx={{ color: '#000' }} />
