@@ -36,12 +36,14 @@ function Header() {
           gap={2}
           alignItems={'center'}
           justifyContent={'space-between'}
+          padding={'5px 20px'}
         >
           <ApiIcon sx={{ color: '#000' }} />
           <CustomizedTypography
             variant='h6'
             fontFamily={'fantasy'}
             color={'#000'}
+            fontWeight={'bold'}
           >
             CodeEnv
           </CustomizedTypography>

@@ -8,7 +8,7 @@ function ContentItem({ item, swapImageDirection = false }) {
     <Box
       display={'flex'}
       flexDirection={isNarrow ? 'column' : 'row'}
-      padding={isNarrow ? 2 : 10}
+      padding={isNarrow ? 5 : 10}
       justifyContent={'space-between'}
       gap={5}
       alignItems={'center'}
