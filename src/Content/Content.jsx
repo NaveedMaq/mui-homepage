@@ -26,6 +26,7 @@ const content = [
 function Content() {
   return (
     <Box
+      component={'section'}
       display={'flex'}
       justifyContent={'center'}
       flexDirection={'column'}

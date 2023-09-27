@@ -2,7 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 
 function Footer() {
   return (
-    <Box display={'flex'} flexDirection={'column'}>
+    <Box component={'footer'} display={'flex'} flexDirection={'column'}>
       <Typography variant='h3' paddingTop={10} textAlign={'center'}>
         Ready For Any Team Size
       </Typography>

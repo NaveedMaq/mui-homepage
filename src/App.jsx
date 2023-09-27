@@ -5,17 +5,9 @@ import Header from './Header/Header';
 function App() {
   return (
     <div>
-      <header>
-        <Header />
-      </header>
-
-      <section>
-        <Content />
-      </section>
-
-      <footer>
-        <Footer />
-      </footer>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
 }
